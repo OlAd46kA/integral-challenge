@@ -43,5 +43,16 @@ def bisekcja(a, b, epsilon):
             return -1
     return middle
 
+def bisekcja_2(a, b, n):
+    for i in range(n):
+        c = (a + b) / 2
+        if f(c) == 0:
+            return c
+        elif f(a) * f(c) < 0:
+            b = c
+        else:
+            a = c
+    return (a + b) / 2
+
 print ("miejsce zerowe to")
 print(bisekcja(1, 10, 0))
